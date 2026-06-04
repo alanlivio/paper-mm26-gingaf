@@ -1,0 +1,202 @@
+/* Extra custom styles for the Zensical academic single page template */
+
+
+/* Academic Header Styling */
+.academic-header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+  margin-top: 2rem;
+}
+
+.academic-title {
+  font-size: 2rem !important;
+  font-weight: 500 !important;
+  line-height: 1.2 !important;
+  margin-bottom: 1.5rem !important;
+  color: var(--md-typeset-color);
+  letter-spacing: -0.025em;
+}
+
+.academic-authors {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.academic-author {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.author-name {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.author-name a {
+  color: var(--md-typeset-a-color) !important;
+  text-decoration: none !important;
+  border-bottom: 1px dashed var(--md-typeset-a-color);
+}
+
+.author-name a:hover {
+  border-bottom-style: solid;
+}
+
+.author-inst {
+  font-size: 0.95rem;
+  color: var(--md-default-fg-color--light);
+  margin-top: 0.25rem;
+}
+
+.academic-conference {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--md-typeset-color);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.academic-notes {
+  font-size: 0.85rem;
+  color: var(--md-default-fg-color--light);
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Link Pill Buttons styling */
+.academic-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.academic-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  border-radius: 9999px;
+  background-color: #27272a !important; /* zinc-800 */
+  color: #ffffff !important;
+  text-decoration: none !important;
+  transition: background-color 0.2s ease-in-out;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+.academic-link-btn:hover {
+  background-color: #000000 !important;
+}
+
+[data-md-color-scheme="slate"] .academic-link-btn {
+  background-color: #e4e4e7 !important; /* zinc-200 */
+  color: #18181b !important;
+}
+
+[data-md-color-scheme="slate"] .academic-link-btn:hover {
+  background-color: #ffffff !important;
+}
+
+.link-icon {
+  width: 0.95rem;
+  height: 0.95rem;
+}
+
+
+
+
+/* Full-bleed Abstract Container */
+/* Container query margin-canceling trick */
+html {
+  container-type: inline-size;
+}
+
+:root {
+  --maximum-text-width: 50rem;
+  --minimum-inline-margin: 1.5rem;
+  --actual-inline-margin: max(
+    var(--minimum-inline-margin),
+    (100cqw - var(--maximum-text-width)) / 2
+  );
+}
+
+.abstract-container {
+  margin-inline: calc(var(--actual-inline-margin) * -1) !important;
+  padding-top: 2rem !important;
+  padding-bottom: 2rem !important;
+  margin-top: 2.5rem !important;
+  margin-bottom: 2.5rem !important;
+}
+
+
+.abstract-inner {
+  max-width: 50rem !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 1.5rem !important;
+  padding-right: 1.5rem !important;
+}
+
+.abstract-inner h2 {
+  text-align: center !important;
+  margin-top: 0 !important;
+  font-size: 1.25rem !important;
+  font-weight: 600 !important;
+  margin-bottom: 1rem !important;
+}
+
+.abstract-inner p {
+  font-size: 0.95rem !important;
+  line-height: 1.75 !important;
+  text-align: justify !important;
+  margin-bottom: 0 !important;
+}
+
+/* Video embed styling */
+video {
+  aspect-ratio: 16 / 9;
+  height: auto;
+  width: 100%;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+}
+
+/* Academic page footer */
+.academic-footer {
+  max-width: 50rem;
+  margin: 5rem auto 3rem auto;
+  text-align: center;
+  font-size: 0.85rem;
+  border-top: 1px solid var(--md-default-fg-color--lightest);
+  padding-top: 1.5rem;
+  color: var(--md-default-fg-color--light);
+}
+
+.academic-footer a {
+  color: var(--md-typeset-a-color) !important;
+  text-decoration: none !important;
+}
+
+.academic-footer a:hover {
+  text-decoration: underline !important;
+}
+
+/* Center all images in the content */
+.academic-container img {
+  display: block !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  max-width: 100%;
+  height: auto;
+}
+
