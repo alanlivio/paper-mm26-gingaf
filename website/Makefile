@@ -1,5 +1,5 @@
 MAIN = main
-LATEX = latexmk -pdf
+LATEX = latexmk -pdf -synctex=1 -interaction=nonstopmode
 
 .PHONY: clean build help latex serve deps
 

@@ -1,5 +1,8 @@
 # paper-mm26-gingaf
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
+[![DOI](https://img.shields.io/badge/DOI-10.1145%2F3767308.3834744-blue.svg)](https://doi.org/10.1145/3767308.3834744)
+
 Repository for the academic paper **gingaf: Headless and Multiplatform Execution of ITU-SBTVD NCL Applications**.
 
 - `latex/` — LaTeX source
@@ -12,10 +15,11 @@ At `website`, do `make help` to see all available commands. The deployment to Gi
 ```bibtex
 @inproceedings{gingaf2026,
     author    = {Guedes, Alan},
-    title     = {gingaf: Headless and multiplatform execution of ITU-SBTVD NCL applications},
-    booktitle = {Proceedings of the 34rd ACM International Conference on Multimedia},
+    title     = {gingaf: Headless and Multiplatform Execution of ITU-SBTVD NCL Applications},
+    booktitle = {Proceedings of the 34th ACM International Conference on Multimedia},
     location   = {Rio de Janeiro, Brazil},
-    year      = {2026}
+    year      = {2026},
+    doi={10.1145/3767308.3834744},
     series = {MM '26}
 }
 ```

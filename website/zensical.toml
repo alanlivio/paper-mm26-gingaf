@@ -1,13 +1,11 @@
 [project]
-site_name = "gingaf: Headless and multiplatform execution of ITU-SBTVD NCL applications"
-site_description = "gingaf: Headless and multiplatform execution of ITU-SBTVD NCL applications. ACM MM 2025."
-site_author = "Alan Livio"
+site_name = "gingaf: Headless and Multiplatform Execution of ITU-SBTVD NCL Applications"
+site_description = "gingaf: Headless and Multiplatform Execution of ITU-SBTVD NCL Applications. ACM MM 2025."
+site_author = "Alan L.V. Guedes"
 copyright = "Copyright &copy; 2026 The authors"
 extra_css = ["stylesheets/extra.css"]
 [project.plugins]
 search = { enabled = false }
-
-
 
 
 [project.theme]
@@ -27,7 +25,6 @@ toggle.name = "Switch to light mode"
 scheme = "default"
 toggle.icon = "lucide/moon"
 toggle.name = "Switch to dark mode"
-
 
 
 [project.markdown_extensions.abbr]

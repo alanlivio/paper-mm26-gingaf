@@ -1,10 +1,10 @@
 ---
-title: "gingaf: Headless and multiplatform execution of ITU-SBTVD NCL applications"
+title: "gingaf: Headless and Multiplatform Execution of ITU-SBTVD NCL Applications"
 template: "home.html"
 hide:
   - navigation
 authors:
-  - name: Alan Livio
+  - name: Alan Guedes
     url: https://alanlivio.github.io
     institution: University of Reading
 conference: "ACM MM 2025"
@@ -18,7 +18,7 @@ links:
   - name: LaTeX/Website Code
     url: https://github.com/alanlivio/paper-gingaf-acm-mm26
     icon: ri:github-line
-description: "gingaf: Headless and multiplatform execution of ITU-SBTVD NCL applications. ACM MM 2025."
+description: "gingaf: Headless and Multiplatform Execution of ITU-SBTVD NCL Applications. ACM MM 2025."
 ---
 
 <div class="abstract-container" markdown="1">
@@ -103,4 +103,18 @@ dart lib/main.dart ../ginga/examples/video.ncl
 cd ../ginga
 make deps # See SETUP.md for environment configuration
 flutter run -d <chrome,windows,emulator-XXXX> --dart-define="APP=examples/video.ncl"
+```
+
+## Citation
+
+```bibtex
+@inproceedings{gingaf2026,
+    author    = {Guedes, Alan},
+    title     = {gingaf: Headless and Multiplatform Execution of ITU-SBTVD NCL Applications},
+    booktitle = {Proceedings of the 34th ACM International Conference on Multimedia},
+    location   = {Rio de Janeiro, Brazil},
+    year      = {2026},
+    doi={10.1145/3767308.3834744},
+    series = {MM '26}
+}
 ```
