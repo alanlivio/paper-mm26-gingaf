@@ -12,6 +12,9 @@ links:
   - name: Paper
     url: main.pdf
     icon: ri:file-pdf-2-line
+  - name: Slides
+    url: slides/
+    icon: ri:slideshow-line
   - name: Software Code
     url: https://github.com/ginga-org-br/gingaf/releases/tag/v0.1.0
     icon: ri:github-line

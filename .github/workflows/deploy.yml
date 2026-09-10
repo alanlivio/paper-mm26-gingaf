@@ -30,6 +30,16 @@ jobs:
         run: make -C website deps
       - name: Build website
         run: make -C website build
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Build slides
+        run: |
+          make -C slides deps
+          make -C slides build
+          rm -rf website/site/slides
+          cp -r slides/site website/site/slides
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v6

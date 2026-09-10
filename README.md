@@ -3,7 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
 [![DOI](https://img.shields.io/badge/DOI-10.1145%2F3767308.3834744-blue.svg)](https://doi.org/10.1145/3767308.3834744)
 
-Repository for the academic paper **gingaf: Headless and Multiplatform Execution of ITU-SBTVD NCL Applications**.
+Website for the paper **gingaf: Headless and Multiplatform Execution of ITU-SBTVD NCL Applications**.
 
 - `latex/` — LaTeX source
 - `website/` — static webpage using Zensical
