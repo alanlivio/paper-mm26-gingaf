@@ -21,25 +21,19 @@ jobs:
         uses: xu-cheng/texlive-action@v3
         with:
           scheme: full
-          run: make -C website latex
+          run: make latex
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.x"
       - name: Install dependencies
-        run: make -C website deps
-      - name: Build website
-        run: make -C website build
+        run: make deps
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 20
-      - name: Build slides
-        run: |
-          make -C slides deps
-          make -C slides build
-          rm -rf website/site/slides
-          cp -r slides/site website/site/slides
+      - name: Build website and slides
+        run: make build
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v6
