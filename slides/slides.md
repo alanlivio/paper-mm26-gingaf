@@ -9,6 +9,40 @@ header: 'gingaf: Headless & Multiplatform NCL Execution — ACM MM 2026'
 .grayscale {
   filter: grayscale(100%);
 }
+.grid-2x2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 14px 28px;
+  width: 100%;
+  margin-top: 8px;
+}
+.grid-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.grid-card img {
+  width: 100%;
+  max-height: 180px;
+  object-fit: contain;
+  border-radius: 6px;
+  border: 1px solid #d0d7de;
+  background-color: transparent;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+.grid-card p {
+  margin: 8px 0 0 0;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.35;
+  color: #1f2328;
+}
+.grid-card a {
+  color: #0969da;
+  font-weight: 700;
+  text-decoration: underline;
+}
 </style>
 
 <!--
@@ -26,7 +60,7 @@ _header: ""
 Computer Science, University of Reading, UK
 
 *ACM International Conference on Multimedia (MM '26)*
-Rio de Janeiro, Brazil
+Rio de Janeiro, BR
 
 **Paper Website (slides, code, demo)**:
 https://alanlivio.github.io/paper-mm26-gingaf/
@@ -47,10 +81,17 @@ https://alanlivio.github.io/paper-mm26-gingaf/
 
 # Agenda
 
-- **Context**
+- **Context & Problem Definition**
 - **Proposed Solution**
-- **Results**
+- **gingaf Features & Demo**
 - **Final Remarks**
+
+---
+
+<!-- _class: invert -->
+<!-- _paginate: skip -->
+
+# Context & Problem Definition
 
 ---
 
@@ -65,7 +106,7 @@ https://alanlivio.github.io/paper-mm26-gingaf/
 - Despite high reach, developer tooling and accessible testing environments remain severely restricted.
 ---
 
-# Context
+# Problems
 
 <div style="display: grid; grid-template-columns: 3fr 2fr">
 
@@ -86,6 +127,13 @@ https://alanlivio.github.io/paper-mm26-gingaf/
 </div>
 
 </div>
+
+---
+
+<!-- _class: invert -->
+<!-- _paginate: skip -->
+
+# Proposed Solution
 
 ---
 
@@ -240,6 +288,66 @@ https://alanlivio.github.io/paper-mm26-gingaf/
 </div>
 
 </div>
+
+---
+
+<!-- _class: invert -->
+<!-- _paginate: skip -->
+
+# gingaf Features & Demo
+
+---
+
+## NCL+links, NCL+videos_grid, NCL+embNCL, and NCL+navigation
+
+<div class="grid-2x2">
+  <div class="grid-card">
+    <img src="assets/gifs/video.ncl.gif" alt="video.ncl" />
+    <p>NCL with basic links (<a href="https://ginga-org-br.github.io/gingaf/playground/?app=video.ncl">video.ncl</a>)</p>
+  </div>
+  <div class="grid-card">
+    <img src="assets/gifs/video_grid.ncl.gif" alt="video_grid.ncl" />
+    <p>NCL with videos grid (<a href="https://ginga-org-br.github.io/gingaf/playground/?app=video_grid.ncl">video_grid.ncl</a>)</p>
+  </div>
+  <div class="grid-card">
+    <img src="assets/gifs/emb_ncl.ncl.gif" alt="emb_ncl.ncl" />
+    <p>NCL embedded with NCL (<a href="https://ginga-org-br.github.io/gingaf/playground/?app=emb_ncl.ncl">emb_ncl.ncl</a>)</p>
+  </div>
+  <div class="grid-card">
+    <img src="assets/gifs/focus_nav.ncl.gif" alt="focus_nav.ncl" />
+    <p>NCL with focus navigation and selection (<a href="https://ginga-org-br.github.io/gingaf/playground/?app=focus_nav.ncl">focus_nav.ncl</a>)</p>
+  </div>
+</div>
+
+---
+
+## NCLua, HTML+CCWS, NCL+embHTML, and NCL+multiuser
+
+<div class="grid-2x2">
+  <div class="grid-card">
+    <img src="assets/gifs/lua_canvas.ncl.gif" alt="lua_canvas.ncl" />
+    <p>NCL with lua canvas drawing and keys (<a href="https://ginga-org-br.github.io/gingaf/playground/?app=lua_canvas.ncl">lua_canvas.ncl</a>)</p>
+  </div>
+  <div class="grid-card">
+    <img src="assets/gifs/current_service.html.gif" alt="current_service.html" />
+    <p>HTML with CCWS /current-service/ (<a href="https://ginga-org-br.github.io/gingaf/playground/?app=current_service.html">current_service.html</a>)</p>
+  </div>
+  <div class="grid-card">
+    <img src="assets/gifs/emb_html.ncl.gif" alt="emb_html.ncl" />
+    <p>NCL with embedded HTML document (<a href="https://ginga-org-br.github.io/gingaf/playground/?app=emb_html.ncl">emb_html.ncl</a>)</p>
+  </div>
+  <div class="grid-card">
+    <img src="assets/gifs/multiuser_profile.gif" alt="multiuser_profile/main.ncl" />
+    <p>NCL with multi-user profile switching and targeted advertising (<a href="https://ginga-org-br.github.io/gingaf/playground/?app=multiuser_profile/main.ncl">multiuser_profile/main.ncl</a>)</p>
+  </div>
+</div>
+
+---
+
+<!-- _class: invert -->
+<!-- _paginate: skip -->
+
+# Final Remarks
 
 ---
 
