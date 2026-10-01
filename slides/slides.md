@@ -24,18 +24,18 @@ header: 'gingaf: Headless & Multiplatform NCL Execution — ACM MM 2026'
 }
 .grid-card img {
   width: 100%;
-  max-height: 180px;
+  max-height: 165px;
   object-fit: contain;
   border-radius: 6px;
-  border: 1px solid #d0d7de;
+  border: 1px solid transparent;
   background-color: transparent;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  box-shadow: none;
 }
 .grid-card p {
-  margin: 8px 0 0 0;
-  font-size: 20px;
+  margin: 6px 0 0 0;
+  font-size: 18px;
   font-weight: 600;
-  line-height: 1.35;
+  line-height: 1.3;
   color: #1f2328;
 }
 .grid-card a {
