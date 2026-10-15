@@ -330,7 +330,7 @@ https://alanlivio.github.io/paper-mm26-gingaf/
   </div>
   <div class="grid-card">
     <img src="assets/gifs/current_service.html.gif" alt="current_service.html" />
-    <p>HTML with CCWS /current-service/ (<a href="https://ginga-org-br.github.io/gingaf/playground/?app=current_service.html">current_service.html</a>)</p>
+    <p>HTML with CCWS /current-service/ (<a href="https://ginga.org.br/gingaf/playground/?app=current_service.html">current_service.html</a>)</p>
   </div>
   <div class="grid-card">
     <img src="assets/gifs/emb_html.ncl.gif" alt="emb_html.ncl" />
