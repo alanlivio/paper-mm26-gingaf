@@ -4,15 +4,14 @@ site_description = "gingaf: Headless and Multiplatform Execution of ITU-SBTVD NC
 site_author = "Alan L.V. Guedes"
 site_url = "https://alanlivio.github.io/paper-mm26-gingaf/"
 copyright = "Copyright &copy; 2026 The authors"
-docs_dir = "website/docs"
-site_dir = "website/site"
+docs_dir = "docs"
+site_dir = "site"
 extra_css = ["stylesheets/extra.css"]
 [project.plugins]
 search = { enabled = false }
 
 
 [project.theme]
-custom_dir = "website/overrides"
 features = ["navigation.instant", "content.code.copy", "content.code.select"]
 
 [project.theme.font]

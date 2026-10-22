@@ -302,19 +302,19 @@ https://alanlivio.github.io/paper-mm26-gingaf/
 
 <div class="grid-2x2">
   <div class="grid-card">
-    <img src="assets/gifs/video.ncl.gif" alt="video.ncl" />
+    <img src="assets/gifs/video.ncl.gif" />
     <p>NCL with basic links (<a href="https://ginga.org.br/gingaf/playground/?app=video.ncl">video.ncl</a>)</p>
   </div>
   <div class="grid-card">
-    <img src="assets/gifs/video_grid.ncl.gif" alt="video_grid.ncl" />
+    <img src="assets/gifs/video_grid.ncl.gif" />
     <p>NCL with videos grid (<a href="https://ginga.org.br/gingaf/playground/?app=video_grid.ncl">video_grid.ncl</a>)</p>
   </div>
   <div class="grid-card">
-    <img src="assets/gifs/emb_ncl.ncl.gif" alt="emb_ncl.ncl" />
+    <img src="assets/gifs/emb_ncl.ncl.gif" />
     <p>NCL embedded with NCL (<a href="https://ginga.org.br/gingaf/playground/?app=emb_ncl.ncl">emb_ncl.ncl</a>)</p>
   </div>
   <div class="grid-card">
-    <img src="assets/gifs/focus_nav.ncl.gif" alt="focus_nav.ncl" />
+    <img src="assets/gifs/focus_nav.ncl.gif" />
     <p>NCL with focus navigation and selection (<a href="https://ginga.org.br/gingaf/playground/?app=focus_nav.ncl">focus_nav.ncl</a>)</p>
   </div>
 </div>
@@ -325,19 +325,19 @@ https://alanlivio.github.io/paper-mm26-gingaf/
 
 <div class="grid-2x2">
   <div class="grid-card">
-    <img src="assets/gifs/lua_canvas.ncl.gif" alt="lua_canvas.ncl" />
+    <img src="assets/gifs/lua_canvas.ncl.gif" />
     <p>NCL with lua canvas drawing and keys (<a href="https://ginga.org.br/gingaf/playground/?app=lua_canvas.ncl">lua_canvas.ncl</a>)</p>
   </div>
   <div class="grid-card">
-    <img src="assets/gifs/current_service.html.gif" alt="current_service.html" />
+    <img src="assets/gifs/current_service.html.gif" />
     <p>HTML with CCWS /current-service/ (<a href="https://ginga.org.br/gingaf/playground/?app=current_service.html">current_service.html</a>)</p>
   </div>
   <div class="grid-card">
-    <img src="assets/gifs/emb_html.ncl.gif" alt="emb_html.ncl" />
+    <img src="assets/gifs/emb_html.ncl.gif" />
     <p>NCL with embedded HTML document (<a href="https://ginga.org.br/gingaf/playground/?app=emb_html.ncl">emb_html.ncl</a>)</p>
   </div>
   <div class="grid-card">
-    <img src="assets/gifs/multiuser_profile.gif" alt="multiuser_profile/main.ncl" />
+    <img src="assets/gifs/multiuser_profile.gif" />
     <p>NCL with multi-user profile switching and targeted advertising (<a href="https://ginga.org.br/gingaf/playground/?app=multiuser_profile/main.ncl">multiuser_profile/main.ncl</a>)</p>
   </div>
 </div>

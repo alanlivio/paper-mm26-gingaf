@@ -18,43 +18,42 @@ help:
 		"  format        Format LaTeX and Python code" \
 		"  clean         Remove build artifacts" \
 		"  deps          Install website dependencies" \
-		"  slides        Build slides and copy to website/docs" \
+		"  slides        Build slides and copy to docs" \
 		"  qrcode        Regenerate slide QR code"
 
 deps:
-	pip install -r website/requirements.txt
+	pip install zensical
 
 latex:
 	$(LATEX_CMD) src/main.tex
-	cp src/*.pdf website/docs/assets/pdfs/
+	cp src/*.pdf docs/assets/pdfs/
 
-website/docs/assets/pdfs/main.pdf: src/main.tex $(wildcard src/references.bib) $(wildcard src/assets/*)
+docs/assets/pdfs/main.pdf: src/main.tex $(wildcard src/references.bib) $(wildcard src/assets/*)
 	$(MAKE) latex
 
-site: website/docs/assets/pdfs/main.pdf slides
+site: docs/assets/pdfs/main.pdf slides
 	zensical build
 
 serve: site
 	zensical serve
 
-website/docs/slides/index.html: slides/slides.md
-	npx -y @marp-team/marp-cli --html slides/slides.md -o slides/site/index.html --no-stdin
-	cp -r slides/assets slides/site/
-	rm -rf website/docs/slides
-	cp -r slides/site website/docs/slides
+docs/slides/index.html: src/slides.md $(wildcard src/assets/*)
+	rm -rf docs/slides
+	npx -y @marp-team/marp-cli --html src/slides.md -o docs/slides/index.html --no-stdin
+	cp -r src/assets docs/slides/
 
-slides: website/docs/slides/index.html
+slides: docs/slides/index.html
 
 qrcode:
-	npx -y qrcode -t svg -o slides/assets/qrcode.svg $(URL)
+	npx -y qrcode -t svg -o src/assets/qrcode.svg $(URL)
 
 clean:
 	latexmk -C -cd src/main.tex
 	rm -rf src/.build
-	rm -f website/docs/assets/pdfs/*.pdf
-	rm -rf website/site
-	rm -rf website/.cache
-	rm -rf slides/site website/docs/slides
+	rm -f docs/assets/pdfs/*.pdf
+	rm -rf site
+	rm -rf .cache
+	rm -rf docs/slides
 
 format:
 	latexindent -w -s -m -c=/tmp/ -y="defaultIndent: '  '" src/main.tex

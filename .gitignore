@@ -9,8 +9,8 @@ src/*.pdf
 *.fdb_latexmk
 *.synctex*
 nul
-website/site/
-website/.cache/
-website/docs/assets/pdfs/*
-!website/docs/assets/pdfs/.gitkeep
-website/docs/slides/
+site/
+.cache/
+docs/assets/pdfs/*
+!docs/assets/pdfs/.gitkeep
+docs/slides/
