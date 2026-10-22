@@ -44,7 +44,7 @@
       {% if page.meta.links %}
         <div class="academic-links">
           {% for link in page.meta.links %}
-            <a class="academic-link-btn" href="{{ link.url }}">
+            <a class="academic-link-btn" href="{{ link.url | url }}">
               {% if "ri:file-pdf" in link.icon or "pdf" in link.name | lower %}
                 <svg class="link-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 16L16 11H13V3H11V11H8L12 16ZM19 18H5V11H3V19C3 19.5523 3.44772 20 4 20H20C20.5523 20 21 19.5523 21 19V11H19V18Z"/></svg>
               {% elif "github" in link.icon or "code" in link.name | lower %}

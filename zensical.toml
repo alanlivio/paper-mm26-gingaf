@@ -2,14 +2,17 @@
 site_name = "gingaf: Headless and Multiplatform Execution of ITU-SBTVD NCL Applications"
 site_description = "gingaf: Headless and Multiplatform Execution of ITU-SBTVD NCL Applications. ACM MM 2025."
 site_author = "Alan L.V. Guedes"
+site_url = "https://alanlivio.github.io/paper-mm26-gingaf/"
 copyright = "Copyright &copy; 2026 The authors"
+docs_dir = "website/docs"
+site_dir = "website/site"
 extra_css = ["stylesheets/extra.css"]
 [project.plugins]
 search = { enabled = false }
 
 
 [project.theme]
-custom_dir = "overrides"
+custom_dir = "website/overrides"
 features = ["navigation.instant", "content.code.copy", "content.code.select"]
 
 [project.theme.font]

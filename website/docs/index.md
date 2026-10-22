@@ -10,7 +10,7 @@ authors:
 conference: "ACM MM 2025"
 links:
   - name: Paper
-    url: main.pdf
+    url: assets/pdfs/main.pdf
     icon: ri:file-pdf-2-line
   - name: Slides
     url: slides/

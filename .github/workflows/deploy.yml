@@ -33,7 +33,7 @@ jobs:
         with:
           node-version: 20
       - name: Build website and slides
-        run: make build
+        run: make site
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v6

@@ -5,7 +5,7 @@
 
 Website for the paper **gingaf: Headless and Multiplatform Execution of ITU-SBTVD NCL Applications**, published at the **34th ACM International Conference on Multimedia (ACM MM '26)**.
 
-- `latex/` — LaTeX source
+- `src/` — LaTeX source
 - `slides/` — presentation slides using Marp
 - `website/` — static webpage using Zensical
 

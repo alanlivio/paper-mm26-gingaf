@@ -1,33 +1,41 @@
 MAKEFLAGS += -s --no-print-directory
+.DEFAULT_GOAL := help
+$(if $(filter Windows_NT,$(OS)),$(if $(shell where printf 2>nul),,$(error coreutils is not installed. Please run: winget install coreutils)))
 
-LATEX_DIR = latex
-LATEX_CMD = latexmk -pdf -synctex=1 -interaction=nonstopmode
+LATEX_CMD = latexmk -pdf -synctex=1 -interaction=nonstopmode -cd
 URL = https://alanlivio.github.io/paper-mm26-gingaf/
 
-.PHONY: all help deps latex slides website build serve serve-slides slides-qrcode clean
-
-all: build
+.PHONY: help deps latex site serve clean slides qrcode format
 
 help:
 	@printf "%s\n" \
-		"deps          Install website dependencies" \
-		"build         Build paper, slides, and website" \
-		"clean         Clean all build artifacts" \
-		"serve         Build and serve website locally" \
-		"serve-slides  Build and serve slides locally" \
-		"latex         Build paper PDF and copy to website/docs" \
-		"slides        Build slides and copy to website/docs" \
-		"website       Build website using Zensical" \
-		"slides-qrcode Regenerate slide QR code"
+		"Usage: make [target]" \
+		"" \
+		"Targets:" \
+		"  site          Build website and slides (compiles LaTeX PDFs first)" \
+		"  latex         Compile LaTeX documents and copy PDFs" \
+		"  serve         Build and serve website locally" \
+		"  format        Format LaTeX and Python code" \
+		"  clean         Remove build artifacts" \
+		"  deps          Install website dependencies" \
+		"  slides        Build slides and copy to website/docs" \
+		"  qrcode        Regenerate slide QR code"
 
 deps:
 	pip install -r website/requirements.txt
 
-website/docs/main.pdf: $(LATEX_DIR)/main.tex
-	cd $(LATEX_DIR) && $(LATEX_CMD) main
-	cp $(LATEX_DIR)/main.pdf website/docs/main.pdf
+latex:
+	$(LATEX_CMD) src/main.tex
+	cp src/*.pdf website/docs/assets/pdfs/
 
-latex: website/docs/main.pdf
+website/docs/assets/pdfs/main.pdf: src/main.tex $(wildcard src/references.bib) $(wildcard src/assets/*)
+	$(MAKE) latex
+
+site: website/docs/assets/pdfs/main.pdf slides
+	zensical build
+
+serve: site
+	zensical serve
 
 website/docs/slides/index.html: slides/slides.md
 	npx -y @marp-team/marp-cli --html slides/slides.md -o slides/site/index.html --no-stdin
@@ -37,22 +45,17 @@ website/docs/slides/index.html: slides/slides.md
 
 slides: website/docs/slides/index.html
 
-slides-qrcode:
+qrcode:
 	npx -y qrcode -t svg -o slides/assets/qrcode.svg $(URL)
 
-website: website/docs/main.pdf website/docs/slides/index.html
-	cd website && zensical build
-
-build: website
-
-serve: website/docs/main.pdf website/docs/slides/index.html
-	cd website && zensical serve
-
-serve-slides: website/docs/slides/index.html
-	npx -y serve -L slides/site
-
 clean:
-	cd $(LATEX_DIR) && $(LATEX_CMD) -C
-	rm -f website/docs/main.pdf
-	rm -rf slides/site slides/slides slides/slides.html
-	rm -rf website/site website/.cache website/docs/slides
+	latexmk -C -cd src/main.tex
+	rm -rf src/.build
+	rm -f website/docs/assets/pdfs/*.pdf
+	rm -rf website/site
+	rm -rf website/.cache
+	rm -rf slides/site website/docs/slides
+
+format:
+	latexindent -w -s -m -c=/tmp/ -y="defaultIndent: '  '" src/main.tex
+	python -m black -q .

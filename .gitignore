@@ -1,3 +1,16 @@
+src/.build/
+src/*.pdf
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.fls
+*.fdb_latexmk
+*.synctex*
+nul
 website/site/
-website/docs/main.pdf
+website/.cache/
+website/docs/assets/pdfs/*
+!website/docs/assets/pdfs/.gitkeep
 website/docs/slides/
