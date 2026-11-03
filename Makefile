@@ -25,10 +25,10 @@ deps:
 	pip install zensical
 
 latex:
-	$(LATEX_CMD) src/main.tex
-	cp src/*.pdf docs/assets/pdfs/
+	$(LATEX_CMD) paper/main.tex
+	cp paper/*.pdf docs/assets/pdfs/
 
-docs/assets/pdfs/main.pdf: src/main.tex $(wildcard src/references.bib) $(wildcard src/assets/*)
+docs/assets/pdfs/main.pdf: paper/main.tex $(wildcard paper/references.bib) $(filter-out %:Zone.Identifier,$(wildcard paper/assets/*))
 	$(MAKE) latex
 
 site: docs/assets/pdfs/main.pdf slides
@@ -37,24 +37,24 @@ site: docs/assets/pdfs/main.pdf slides
 serve: site
 	zensical serve
 
-docs/slides/index.html: src/slides.md $(wildcard src/assets/*)
+docs/slides/index.html: slides/slides.md $(filter-out %:Zone.Identifier,$(wildcard slides/assets/*))
 	rm -rf docs/slides
-	npx -y @marp-team/marp-cli --html src/slides.md -o docs/slides/index.html --no-stdin
-	cp -r src/assets docs/slides/
+	npx -y @marp-team/marp-cli --html slides/slides.md -o docs/slides/index.html --no-stdin
+	cp -r slides/assets docs/slides/
 
 slides: docs/slides/index.html
 
 qrcode:
-	npx -y qrcode -t svg -o src/assets/qrcode.svg $(URL)
+	npx -y qrcode -t svg -o slides/assets/qrcode.svg $(URL)
 
 clean:
-	latexmk -C -cd src/main.tex
-	rm -rf src/.build
+	latexmk -C -cd paper/main.tex
+	rm -rf paper/.build
 	rm -f docs/assets/pdfs/*.pdf
 	rm -rf site
 	rm -rf .cache
 	rm -rf docs/slides
 
 format:
-	latexindent -w -s -m -c=/tmp/ -y="defaultIndent: '  '" src/main.tex
+	latexindent -w -s -m -c=/tmp/ -y="defaultIndent: '  '" paper/main.tex
 	python -m black -q .

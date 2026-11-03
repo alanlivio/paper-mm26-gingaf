@@ -1,5 +1,6 @@
-src/.build/
-src/*.pdf
+paper/.build/
+paper/*.pdf
+slides/*.pdf
 *.aux
 *.bbl
 *.blg
