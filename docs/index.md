@@ -17,7 +17,7 @@ description: "gingaf: Headless and Multiplatform Execution of ITU-SBTVD NCL Appl
 <div class="academic-links">
 <a class="academic-link-btn" href="assets/pdfs/main.pdf">
 <svg class="link-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 16L16 11H13V3H11V11H8L12 16ZM19 18H5V11H3V19C3 19.5523 3.44772 20 4 20H20C20.5523 20 21 19.5523 21 19V11H19V18Z"/></svg>
-<span>Paper</span>
+<span>Pre-print</span>
 </a>
 <a class="academic-link-btn" href="slides/">
 <svg class="link-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M13 21V23H11V21H3C2.44772 21 2 20.5523 2 20V4C2 3.44772 2.44772 3 3 3H21C21.5523 3 22 3.44772 22 4V20C22 20.5523 21.5523 21 21 21H13ZM4 5V19H20V5H4ZM10 7.5L16 12L10 16.5V7.5Z"/></svg>
