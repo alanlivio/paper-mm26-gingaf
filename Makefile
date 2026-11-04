@@ -28,7 +28,7 @@ latex:
 	$(LATEX_CMD) paper/main.tex
 	cp paper/*.pdf docs/assets/pdfs/
 
-docs/assets/pdfs/main.pdf: paper/main.tex $(wildcard paper/references.bib) $(filter-out %:Zone.Identifier,$(wildcard paper/assets/*))
+docs/assets/pdfs/main.pdf: paper/main.tex
 	$(MAKE) latex
 
 site: docs/assets/pdfs/main.pdf slides
@@ -37,7 +37,7 @@ site: docs/assets/pdfs/main.pdf slides
 serve: site
 	zensical serve
 
-docs/slides/index.html: slides/slides.md $(filter-out %:Zone.Identifier,$(wildcard slides/assets/*))
+docs/slides/index.html: slides/slides.md
 	rm -rf docs/slides
 	npx -y @marp-team/marp-cli --html slides/slides.md -o docs/slides/index.html --no-stdin
 	cp -r slides/assets docs/slides/
