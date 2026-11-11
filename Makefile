@@ -5,7 +5,7 @@ $(if $(filter Windows_NT,$(OS)),$(if $(shell where printf 2>nul),,$(error coreut
 LATEX_CMD = latexmk -pdf -synctex=1 -interaction=nonstopmode -cd
 URL = https://alanlivio.github.io/paper-mm26-gingaf/
 
-.PHONY: help deps latex site serve clean slides qrcode format
+.PHONY: help deps latex site serve clean slides slides-single qrcode format
 
 help:
 	@printf "%s\n" \
@@ -19,6 +19,7 @@ help:
 		"  clean         Remove build artifacts" \
 		"  deps          Install website dependencies" \
 		"  slides        Build slides and copy to docs" \
+		"  slides-single Build portable single-file HTML slides (slides-aguedes.html)" \
 		"  qrcode        Regenerate slide QR code"
 
 deps:
@@ -44,6 +45,10 @@ docs/slides/index.html: slides/slides.md
 
 slides: docs/slides/index.html
 
+slides-single: slides
+	rm -f slides-aguedes.html
+	npx --yes single-file-cli --block-scripts=false --remove-hidden-elements=false --remove-unused-styles=false docs/slides/index.html slides-aguedes.html
+
 qrcode:
 	npx -y qrcode -t svg -o slides/assets/qrcode.svg $(URL)
 
@@ -54,6 +59,7 @@ clean:
 	rm -rf site
 	rm -rf .cache
 	rm -rf docs/slides
+	rm -f slides-aguedes.html
 
 format:
 	latexindent -w -s -m -c=/tmp/ -y="defaultIndent: '  '" paper/main.tex
