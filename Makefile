@@ -48,6 +48,7 @@ slides: docs/slides/index.html
 slides-single: slides
 	rm -f slides-aguedes.html
 	npx --yes single-file-cli --block-scripts=false --remove-hidden-elements=false --remove-unused-styles=false docs/slides/index.html slides-aguedes.html
+	sed -i 's|data:application/octet-stream;base64,|data:image/svg+xml;base64,|g' slides-aguedes.html
 
 qrcode:
 	npx -y qrcode -t svg -o slides/assets/qrcode.svg $(URL)

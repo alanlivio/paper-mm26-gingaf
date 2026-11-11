@@ -206,7 +206,7 @@ https://alanlivio.github.io/paper-mm26-gingaf/
 
 ---
 
-# Context: Ginga is a TV software (>60M TV setops in South America)
+# Context: Ginga is a TV software (>60M TV set-top boxes in South America)
 
 <div style="display: flex; flex-direction: column; gap: 14px; margin-top: 10px; width: 100%;">
   <div style="display: flex; justify-content: space-between; gap: 24px; width: 100%;">
@@ -229,7 +229,7 @@ https://alanlivio.github.io/paper-mm26-gingaf/
 
 ---
 
-# Context: Ginga is academic let effort
+# Context: Ginga is an academic-led effort
 
 ![w:700 center](assets/image-4.png)
 
@@ -265,7 +265,7 @@ https://alanlivio.github.io/paper-mm26-gingaf/
 
 <!-- _class: 2-columns-3fr1fr -->
 
-# Context: Ginga is academic let effort
+# Context: Ginga plays NCL documents
 
 ## Example video.ncl
 
@@ -315,7 +315,7 @@ https://alanlivio.github.io/paper-mm26-gingaf/
 <!-- _class: invert -->
 <!-- _paginate: skip -->
 
-# Proposed Solutution
+# Proposed Solution
 
 ---
 
@@ -345,14 +345,21 @@ https://alanlivio.github.io/paper-mm26-gingaf/
 </div>
 
 <div style="background: #e2e7ee; border: 2px solid #b8c4d1; border-radius: 8px; padding: 4px 0; height: 40px; margin: 8px 0 10px 0; box-shadow: 0 2px 6px rgba(0,0,0,0.05); display: flex; align-items: center; justify-content: center; gap: 32px; box-sizing: border-box;">
-  <div style="display: flex; align-items: center; gap: 8px;">
-    <img src="assets/dart.svg" style="height: 22px; width: 22px; object-fit: contain; margin: 0;" />
-    <span style="font-size: 20px; font-weight: 800; color: #1f2328; line-height: 1;">Dart</span>
-  </div>
-  <div style="display: flex; align-items: center; gap: 8px;">
-    <img src="assets/flutter.svg" style="height: 22px; width: 22px; object-fit: contain; margin: 0;" />
-    <span style="font-size: 20px; font-weight: 800; color: #1f2328; line-height: 1;">Flutter</span>
-  </div>
+
+<div style="display: flex; align-items: center; gap: 8px;">
+
+<img src="assets/dart.svg" width="22" height="22" style="height: 22px; width: 22px; object-fit: contain; margin: 0;" />
+<span style="font-size: 20px; font-weight: 800; color: #1f2328; line-height: 1;">Dart</span>
+
+</div>
+
+<div style="display: flex; align-items: center; gap: 8px;">
+
+<img src="assets/flutter.svg" width="22" height="22" style="height: 22px; width: 22px; object-fit: contain; margin: 0;" />
+<span style="font-size: 20px; font-weight: 800; color: #1f2328; line-height: 1;">Flutter</span>
+
+</div>
+
 </div>
 
 <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; height: 145px; margin-top: 6px;">
@@ -456,13 +463,13 @@ It allows advancing simulated playback time arbitrarily without waiting for real
 # Contributions
 
 - **1. Multiplatform Graphics Engine**
-  Single Dart/Flutter multiplataform code
+  Single Dart/Flutter multiplatform code
 
 - **2. Decoupled UI**
   In-memory NCL state machine isolated from UI rendering
 
 - **3. Virtual Clock**
-  time progression via `tick()`
+  Time progression via `tick()`
 
 - **4. Open-Source**
   https://github.com/ginga-org-br/gingaf
@@ -480,4 +487,4 @@ _class: 2-columns-1fr3fr
 
   **Contact**: `a.guedes@reading.ac.uk`
 
-- ![](assets/portal1.png)
+- ![](assets/image-5.png)
