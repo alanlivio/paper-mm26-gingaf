@@ -86,6 +86,35 @@ section[class~="2-columns"] li img {
   object-fit: contain;
   margin: 12px 0 10px 0;
 }
+section[class~="3-columns"] ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  align-items: end;
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+}
+section[class~="3-columns"] li {
+  text-align: center;
+  margin: 0;
+}
+section[class~="3-columns"] li p {
+  margin: 0;
+  font-size: 14px;
+  color: #555;
+}
+section[class~="3-columns"] li br {
+  display: none;
+}
+section[class~="3-columns"] li img {
+  display: block;
+  max-width: 100%;
+  object-fit: contain;
+  background-color: transparent;
+  box-shadow: none;
+  margin: 0 auto 6px auto;
+}
 section[class~="2-columns-1fr3fr"] ul {
   display: grid;
   grid-template-columns: 1fr 3fr;
@@ -378,22 +407,18 @@ https://alanlivio.github.io/paper-mm26-gingaf/
 
 ---
 
+<!-- _class: 3-columns -->
+
 # Proposed Solution: portable multimedia engine
 
-<div style="display: flex; gap: 16px; justify-content: center; align-items: flex-end; margin-top: 15px;">
-  <div style="text-align: center;">
-    <img src="assets/app_clock4.png" height="230" style="border-radius: 4px; box-shadow: 0 2px 8px rgba(0,0,0,0.15);" />
-    <p style="font-size: 14px; margin-top: 6px; color: #555;">(a) Windows</p>
-  </div>
-  <div style="text-align: center;">
-    <img src="assets/android.png" height="230" style="border-radius: 4px; box-shadow: 0 2px 8px rgba(0,0,0,0.15);" />
-    <p style="font-size: 14px; margin-top: 6px; color: #555;">(b) Android</p>
-  </div>
-  <div style="text-align: center;">
-    <img src="assets/web.png" height="230" style="border-radius: 4px; box-shadow: 0 2px 8px rgba(0,0,0,0.15);" />
-    <p style="font-size: 14px; margin-top: 6px; color: #555;">(c) Web Browser</p>
-  </div>
-</div>
+- ![w:500](assets/app_clock4.png)
+  (a) Windows
+
+- ![w:200](assets/android.png)
+  (b) Android
+
+- ![w:300](assets/web.png)
+  (c) Web Browser
 
 ---
 
@@ -401,13 +426,13 @@ https://alanlivio.github.io/paper-mm26-gingaf/
 
 # Proposed Solution: Architecture
 
-- **Legacy Ginga Architecture**
+- **Previous ginga Implementations**
 
   ![](assets/coupled.png)
 
   <span style="font-weight: 700; color: #f85149;">No virtual clock & coupled UI-logic</span>
 
-- **Gingaf Architecture**
+- **`gingaf` Architecture**
 
   ![](assets/arch.png)
 
@@ -428,11 +453,9 @@ It allows advancing simulated playback time arbitrarily without waiting for real
 
 # Final Remarks
 
----
+<!-- __class: grid-2x2 -->
 
-<!-- _class: grid-2x2 -->
-
-## Demos: NCL+links, NCL+videos_grid, NCL+embNCL, and NCL+navigation
+<!-- ## Demos: NCL+links, NCL+videos_grid, NCL+embNCL, and NCL+navigation
 
 - ![](assets/gifs/video.ncl.gif)
   NCL with basic links ([video.ncl](https://ginga.org.br/gingaf/playground/?app=video.ncl))
@@ -446,15 +469,23 @@ It allows advancing simulated playback time arbitrarily without waiting for real
 - ![](assets/gifs/focus_nav.ncl.gif)
   NCL with focus navigation and selection ([focus_nav.ncl](https://ginga.org.br/gingaf/playground/?app=focus_nav.ncl))
 
+--- -->
+
 ---
 
-<!-- _class: 2-columns -->
+<!-- _class: 2-columns-1fr3fr -->
 
 # Demos: Playground
 
-- ![w:300](assets/image-5.png)
+- ![w:700](assets/image-5.png)
 
-- ![](assets/playground-ncl.gif)
+- ![w:900](assets/playground.gif)
+
+---
+
+# Demos: Playground Debug
+
+![center w:900](assets/playground-debug.gif)
 
 ---
 
@@ -469,7 +500,7 @@ It allows advancing simulated playback time arbitrarily without waiting for real
   In-memory NCL state machine isolated from UI rendering
 
 - **3. Virtual Clock**
-  Time progression via `tick()`
+  Time progression via `tick()` and allow debug
 
 - **4. Open-Source**
   https://github.com/ginga-org-br/gingaf
